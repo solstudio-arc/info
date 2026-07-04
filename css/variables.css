@@ -1,0 +1,91 @@
+:root {
+
+    /* ==========================
+       Brand
+    ========================== */
+
+    --primary: #6c63ff;
+    --primary-dark: #564ee8;
+    --primary-light: #f1efff;
+
+    --accent: #8b7cff;
+
+    /* ==========================
+       Status
+    ========================== */
+
+    --success: #2db86b;
+    --success-bg: #e8f8ef;
+
+    --warning: #ff9800;
+    --warning-bg: #fff4df;
+
+    --development: #5c7cff;
+    --development-bg: #edf2ff;
+
+    /* ==========================
+       Background
+    ========================== */
+
+    --background: #f6f8fc;
+    --surface: #ffffff;
+    --surface-hover: #fbfbff;
+
+    /* ==========================
+       Text
+    ========================== */
+
+    --text: #1f1f24;
+    --text-light: #666b77;
+    --text-disabled: #8f96a3;
+
+    /* ==========================
+       Border
+    ========================== */
+
+    --border: #e8ebf3;
+    --border-light: #f2f4f8;
+
+    /* ==========================
+       Shadow
+    ========================== */
+
+    --shadow-sm:
+        0 4px 12px rgba(0, 0, 0, .05);
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+
+    --shadow-lg:
+        0 20px 50px rgba(0, 0, 0, .12);
+
+    /* ==========================
+       Radius
+    ========================== */
+
+    --radius-xs: 10px;
+    --radius-sm: 14px;
+    --radius: 20px;
+    --radius-lg: 28px;
+    --radius-xl: 36px;
+
+    /* ==========================
+       Layout
+    ========================== */
+
+    --container: 1180px;
+
+    --section-gap: 110px;
+
+    --card-gap: 24px;
+
+    /* ==========================
+       Animation
+    ========================== */
+
+    --transition-fast: .18s ease;
+
+    --transition:
+        .28s cubic-bezier(.2,.8,.2,1);
+
+}

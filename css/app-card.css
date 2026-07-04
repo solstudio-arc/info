@@ -1,0 +1,422 @@
+.meta{
+    display:flex;
+    flex-direction:column;
+}
+
+.meta span{
+    font-size:12px;
+    color:var(--text-light);
+}
+
+.meta strong{
+    margin-top:2px;
+    font-size:15px;
+}
+
+/* ==========================
+   APP GRID
+========================== */
+.app-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:28px;
+}
+
+/* ==========================
+   CARD
+========================== */
+.app-card{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    padding:22px;
+    border-radius:26px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-sm);
+    text-decoration:none;
+    color:inherit;
+    transition:0.25s ease;
+    overflow:hidden;
+}
+
+/* Hover */
+.app-card:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
+    border-color:rgba(108,99,255,.25);
+    background:
+        linear-gradient(
+            180deg,
+            white,
+            #fcfbff
+        );
+}
+
+/* Background Effect */
+.app-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(108,99,255,.08),
+            transparent 45%
+        );
+    opacity:0;
+    transition:var(--transition);
+}
+
+.app-card:hover::before{
+    opacity:1;
+}
+
+/* Shine */
+.app-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-140%;
+    width:60%;
+    height:100%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+    transition:.9s;
+}
+
+.app-card:hover::after{
+    left:150%;
+}
+
+.card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:18px;
+}
+
+/* ==========================
+   META
+========================== */
+.card-meta{
+    text-align:right;
+    font-size:12px;
+    color:var(--text-light);
+}
+
+.card-meta strong{
+    display:block;
+    font-size:14px;
+    color:var(--text);
+    margin-top:2px;
+}
+
+/* ==========================
+   CATEGORY
+========================== */
+.card-category{
+    display:inline-flex;
+    align-items:center;
+    width:max-content;
+    padding:6px 12px;
+    border-radius:999px;
+    background:var(--primary-light);
+    color:var(--primary);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.04em;
+    margin-bottom:22px;
+}
+
+.card-category::before{
+    content:"";
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--primary);
+    margin-right:8px;
+}
+
+/* ==========================
+   MAIN
+========================== */
+.card-main{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
+}
+
+/* ==========================
+   ICON
+========================== */
+.app-icon{
+    width:88px;
+    height:88px;
+    border-radius:22px;
+    object-fit:cover;
+    flex-shrink:0;
+    transition:var(--transition);
+    box-shadow:
+        0 10px 24px rgba(0,0,0,.12);
+}
+
+.icon-wrapper{
+    position:relative;
+    width:84px;
+    height:84px;
+}
+
+.icon-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:-8px;
+    border-radius:24px;
+    background:radial-gradient(
+        circle,
+        rgba(108,99,255,.25),
+        transparent 70%
+    );
+    opacity:0;
+    transition:0.25s ease;
+}
+
+.app-card:hover .icon-wrapper::before{
+    opacity:1;
+}
+
+.app-card:hover .icon-wrapper::before{
+    opacity:1;
+}
+
+.app-card:hover .app-icon{
+    transform:
+        scale(1.06)
+        rotate(-2deg);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+.card-content{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    min-height:88px;
+}
+
+.card-content h3{
+    font-size:20px;
+    font-weight:800;
+    margin-bottom:6px;
+}
+
+.card-content p{
+    font-size:14px;
+    color:var(--text-light);
+    line-height:1.6;
+    min-height:42px;
+}
+
+.card-divider{
+    height:1px;
+    margin-top:22px;
+    background:var(--border);
+}
+
+/* ==========================
+   HEADER
+========================== */
+.card-header{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:flex-start;
+}
+
+.card-header h3{
+    font-size:23px;
+    font-weight:700;
+    letter-spacing:-0.5px;
+    margin-bottom:8px;
+}
+
+.card-header p{
+    font-size:15px;
+    line-height:1.65;
+    color:var(--text-light);
+    min-height:52px;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.card-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:22px;
+}
+
+.card-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px solid var(--border);
+}
+
+/* ==========================
+   STORE BADGE
+========================== */
+.store-badge{
+    height:40px;
+    transition:var(--transition);
+}
+
+.app-card:hover .store-badge{
+    transform:scale(1.04);
+}
+
+/* ==========================
+   ARROW
+========================== */
+.arrow{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f3f5ff;
+    transition:0.2s ease;
+}
+
+.app-card:hover .arrow{
+    background:var(--primary);
+    color:white;
+    transform:translateX(6px);
+}
+
+.card-action{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ==========================
+   DISABLED
+========================== */
+.app-card.disabled{
+    cursor:default;
+}
+
+.app-card.disabled:hover{
+    transform:none;
+    box-shadow:var(--shadow-sm);
+    border-color:var(--border);
+}
+
+.app-card.disabled:hover::before{
+    opacity:0;
+}
+
+.app-card.disabled:hover::after{
+    left:-140%;
+}
+
+.app-card.disabled:hover .app-icon{
+    transform:none;
+}
+
+.app-card.disabled:hover .arrow{
+    transform:none;
+}
+
+.app-card.disabled .card-footer{
+    display:none;
+}
+
+/* ==========================
+   COMING SOON EFFECT
+========================== */
+.app-card.disabled{
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fcfcff
+        );
+}
+
+/* ==========================
+   CARD TITLE EFFECT
+========================== */
+.card-header h3{
+    transition:var(--transition);
+}
+
+.app-card:hover .card-header h3{
+    color:var(--primary);
+}
+
+/* ==========================
+   CLICK EFFECT
+========================== */
+.app-card:active{
+    transform:scale(.985);
+}
+
+/* ==========================
+   ACCESSIBILITY
+========================== */
+.app-card:focus-visible{
+    outline:3px solid rgba(108,99,255,.35);
+    outline-offset:4px;
+}
+
+/* ==========================
+   TOP ACCENT
+========================== */
+.card-accent{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        #9e95ff
+    );
+}
+
+.app-card.gmail {
+    --accent: rgba(225, 48, 108, 0.12);
+    color: #EA4335;
+}
+
+.app-card.gmail .card-accent {
+    background: var(--accent);
+}
+
+.app-card.gmail .icon-wrapper {
+    transform: scale(0.85);
+}
+
+.app-card.instagram {
+    --accent: rgba(225, 48, 108, 0.12);
+    color: #C13584;
+}
+
+.app-card.instagram .card-accent {
+    background: var(--accent);
+}
+
+.app-card.github { color: #333; }

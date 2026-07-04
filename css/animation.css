@@ -1,0 +1,57 @@
+/* ==========================
+   SECTION FADE
+========================== */
+.hero,
+.section,
+footer{
+    animation:
+        fadeUp .8s ease both;
+}
+
+.section:nth-of-type(2){
+    animation-delay:.15s;
+}
+
+.section:nth-of-type(3){
+    animation-delay:.3s;
+}
+
+.section:nth-of-type(4){
+    animation-delay:.45s;
+}
+
+.section:nth-of-type(5){
+    animation-delay:.6s;
+}
+
+footer{
+    animation-delay:.8s;
+}
+
+/* ==========================
+   KEYFRAME
+========================== */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:
+            translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0);
+    }
+}
+
+.fade-init{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .6s ease;
+}
+
+.fade-init.show{
+    opacity:1;
+    transform:translateY(0);
+}
